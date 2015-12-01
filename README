@@ -17,7 +17,7 @@ Prerequisites:
     If you manually rebuild the bindings with swig -python wiringpi.i
 
 Get/setup repo:
-    git clone https://github.com/Gadgetoid/WiringPi2-Python.git
+    git clone https://github.com/bkrepo/WiringPi2-Python.git
     cd WiringPi2-Python
     
 Build & install with:
@@ -37,11 +37,6 @@ Usage:
     OR
     wiringpi2.wiringPiSetupGpio() // For GPIO pin numbering
 
-    Setting up IO expanders (This example was tested on a quick2wire board with one digital IO expansion board connected via I2C):
-    wiringpi2.mcp23017Setup(65,0x20)
-    wiringpi2.pinMode(65,1)
-    wiringpi2.digitalWrite(65,1)
-
     General IO:
     wiringpi2.pinMode(1,1) // Set pin 1 to output
     wiringpi2.digitalWrite(1,1) // Write 1 HIGH to pin 1
@@ -51,8 +46,8 @@ Usage:
     wiringpi2.shiftOut(1,2,0,123) // Shift out 123 (b1110110, byte 0-255) to data pin 1, clock pin 2
 
     Serial:
-    serial = wiringpi2.serialOpen('/dev/ttyAMA0',9600) // Requires device/baud and returns an ID
-    wiringpi2.serialPuts(serial,"hello")
+    serial = wiringpi2.serialOpen('/dev/ttySAC2', 115200) // Requires device/baud and returns an ID
+    wiringpi2.serialPuts(serial,"Hello ODROID\r\n")
     wiringpi2.serialClose(serial) // Pass in ID
 
 Full details at:
