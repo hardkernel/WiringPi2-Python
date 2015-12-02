@@ -22,7 +22,7 @@ sudo ./build
 
 **Get/setup repo:**
 ```bash
-git clone https://github.com/bkrepo/WiringPi2-Python.git
+git clone https://github.com/hardkernel/WiringPi2-Python.git
 cd WiringPi2-Python
 ```
 
