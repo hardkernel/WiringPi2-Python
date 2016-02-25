@@ -19,6 +19,8 @@ Prerequisites:
 Get/setup repo:
     git clone https://github.com/hardkernel/WiringPi2-Python.git
     cd WiringPi2-Python
+    git submodule init
+    git submodule update
     
 Build & install with:
     sudo python setup.py install
