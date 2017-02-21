@@ -51,7 +51,6 @@ extern int wiringPiI2CSetup          (const int devId) ;
 // Header file WiringPi/wiringPi/wiringPiSPI.h
 int wiringPiSPIGetFd     (int channel) ;
 int wiringPiSPIDataRW    (int channel, unsigned char *data, int len) ;
-int wiringPiSPISetupMode (int channel, int speed, int mode) ;
 int wiringPiSPISetup     (int channel, int speed) ;
 
 // Header file WiringPi/wiringPi/wiringSerial.h
@@ -67,9 +66,6 @@ extern int   serialGetchar   (const int fd) ;
 // Header file WiringPi/wiringPi/wiringShift.h
 extern uint8_t shiftIn      (uint8_t dPin, uint8_t cPin, uint8_t order) ;
 extern void    shiftOut     (uint8_t dPin, uint8_t cPin, uint8_t order, uint8_t val) ;
-
-// Header file WiringPi/wiringPi/wpiExtensions.h
-extern int loadWPiExtension (char *progName, char *extensionData, int verbose) ;
 
 // Header file WiringPi/wiringPi/drcSerial.h
 extern int drcSetupSerial (const int pinBase, const int numPins, const char *device, const int baud) ;
