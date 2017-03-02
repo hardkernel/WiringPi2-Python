@@ -10,8 +10,11 @@ Build with gcc version 4.6.3 (Debian 4.6.3-14+rpi1)
 Built against Python 2.7.2, Python 3.2.3
 
 **Prerequisites:**
-You **must** have python-dev and python-setuptools installed
-If you manually rebuild the bindings with swig -python wiringpi.i
+```base
+sudo apt update
+sudo apt install python-dev python-setuptools swig3.0
+```
+
 
 **Get/setup repo:**
 ```bash
@@ -22,10 +25,19 @@ git submodule update
 ```
 
 **Build & install with:**
-`sudo python setup.py install`
+`./build.sh`
+Or
+```bash
+swig3.0 -python -threads wiringpi.i
+sudo python setup.py build install
+```
 
-Or Python 3:
-`sudo python3 setup.py install`
+Python 3:
+```bash
+sudo apt install python3-dev python3-setuptools swig3.0
+swig3.0 -python -threads wiringpi.i
+sudo python3 setup.py build install
+```
 
 **Class-based Usage:**
 Description incoming!
