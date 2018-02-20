@@ -1,3 +1,4 @@
 [submodule "WiringPi"]
 	path = WiringPi
-	url = https://github.com/wiringPi/WiringPi
+	url = https://github.com/hardkernel/wiringPi.git
+	branch = dev
