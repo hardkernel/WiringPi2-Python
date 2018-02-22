@@ -11,6 +11,12 @@ from glob import glob
 
 sources = glob('WiringPi/devLib/*.c')
 sources += glob('WiringPi/wiringPi/*.c')
+
+# Exclude wiringPi.c. This setup is only for ODROID WiringPi.
+sources = list(set(sources) - set(glob('WiringPi/wiringPi/wiringPi.c')))
+# Exclude template file.
+sources = list(set(sources) - set(glob('WiringPi/wiringPi/odroid_template.c')))
+
 # If we have swig, use it.  Otherwise, use the pre-generated
 # wrapper from the source distribution.
 if find_executable('swig'):
