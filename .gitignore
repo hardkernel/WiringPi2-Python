@@ -5,3 +5,5 @@ __pycache__
 *.pyc
 wiringpi_wrap.c
 wiringpi.py
+.DS_Store
+.vscode
