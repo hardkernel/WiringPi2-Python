@@ -139,9 +139,6 @@ extern int htu21dSetup (const int pinBase) ;
 // Header file WiringPi/wiringPi/pseudoPins.h
 extern int pseudoPinsSetup (const int pinBase) ;
 
-// Header file WiringPi/wiringPi/rht03.h
-extern int rht03Setup (const int pinBase, const int devicePin) ;
-
 // Header file WiringPi/wiringPi/wpiExtensions.h
 extern int loadWPiExtension (char *progName, char *extensionData, int verbose) ;
 
@@ -199,7 +196,6 @@ extern int  lcdInit (const int rows, const int cols, const int bits,
 
 // Header file WiringPi/devLib/maxdetect.h
 int maxDetectRead (const int pin, unsigned char buffer [4]) ;
-int readRHT03 (const int pin, int *temp, int *rh) ;
 
 // Header file WiringPi/devLib/piGlow.h
 extern void piGlow1     (const int leg,  const int ring, const int intensity) ;

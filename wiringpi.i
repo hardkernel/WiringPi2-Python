@@ -39,7 +39,6 @@
 #include "WiringPi/wiringPi/ds18b20.h"
 #include "WiringPi/wiringPi/htu21d.h"
 #include "WiringPi/wiringPi/pseudoPins.h"
-#include "WiringPi/wiringPi/rht03.h"
 #include "WiringPi/wiringPi/wpiExtensions.h"
 #include "WiringPi/devLib/ds1302.h"
 #include "WiringPi/devLib/font.h"
