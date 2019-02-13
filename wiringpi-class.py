@@ -105,12 +105,17 @@ class GPIO(object):
     return piBoardRev()
   def wpiPinToGpio(self,*args):
     return wpiPinToGpio(*args)
-  def setPadDrive(self,*args):
-    return setPadDrive(*args)
   def getAlt(self,*args):
     return getAlt(*args)
   def digitalWriteByte(self,*args):
     return digitalWriteByte(*args)
+
+  def setPadDrive(self,*args):
+    return setPadDrive(*args)
+  def getPadDrive(self,*args):
+    return getPadDrive(*args)
+  def getPUPD(self,*args):
+    return getPUPD(*args)
 
   def pwmSetMode(self,*args):
     pwmSetMode(*args)
