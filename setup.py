@@ -12,11 +12,6 @@ from glob import glob
 sources = glob('WiringPi/devLib/*.c')
 sources += glob('WiringPi/wiringPi/*.c')
 
-# Exclude wiringPi.c. This setup is only for ODROID WiringPi.
-sources = list(set(sources) - set(glob('WiringPi/wiringPi/wiringPi.c')))
-# Exclude original SPI and I2C files.
-sources = list(set(sources) - set(glob('WiringPi/wiringPi/wiringPiSPI.c')))
-sources = list(set(sources) - set(glob('WiringPi/wiringPi/wiringPiI2C.c')))
 # Exclude rht03.
 sources = list(set(sources) - set(glob('WiringPi/wiringPi/rht03.c')))
 # Exclude template file.
