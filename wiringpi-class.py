@@ -37,12 +37,16 @@ class I2C(object):
     return wiringPiI2CReadReg8(*args)
   def readReg16(self,*args):
     return wiringPiI2CReadReg16(*args)
+  def readBlock(self,*args):
+    return wiringPiI2CReadBlock(*args)
   def write(self,*args):
     return wiringPiI2CWrite(*args)
   def writeReg8(self,*args):
     return wiringPiI2CWriteReg8(*args)
   def writeReg16(self,*args):
     return wiringPiI2CWriteReg16(*args)
+  def writeBlock(self,*args):
+    return wiringPiI2CWriteBlock(*args)
 
 class GPIO(object):
   WPI_MODE_PINS = 0
