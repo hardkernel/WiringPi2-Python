@@ -31,6 +31,8 @@ for file in HEADERS:
         extern = True
     for line in h:
         line = line.strip()
+        if 'UNU' in line[-5:]:
+            line = line[:-5] + ';'
         if cont:
             print("\t{}".format(line))
             cont = ";" not in line
