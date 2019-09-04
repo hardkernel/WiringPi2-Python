@@ -18,20 +18,20 @@ WiringPi implements new functions for managing IO expanders.
 Quick Install
 =============
 
-.. image:: https://badge.fury.io/py/wiringpi.svg
-   :alt: PyPI version badge
-   :target: https://pypi.org/project/odroid-wiringpi/
+.. image:: https://badge.fury.io/py/odroid-wiringpi.svg
+    :alt: PyPI version badge
+    :target: https://badge.fury.io/py/odroid-wiringpi
 
 The library is packaged on PyPI and can be installed with pip:
 
-``pip install wiringpi``
+``pip install odroid-wiringpi``
 
 Usage
 =====
 
 .. code:: python
 
-    import wiringpi
+    import odroid_wiringpi as wiringpi
 
     # One of the following MUST be called before using IO functions:
     wiringpi.wiringPiSetup()      # For sequential pin numbering
