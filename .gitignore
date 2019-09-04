@@ -7,3 +7,4 @@ wiringpi_wrap.c
 odroid_wiringpi.py
 .DS_Store
 .vscode
+pypi_distribute.sh
