@@ -1,4 +1,4 @@
-%module wiringpi
+%module odroid_wiringpi
 
 %{
 #if PY_MAJOR_VERSION >= 3

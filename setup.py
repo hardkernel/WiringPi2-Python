@@ -56,8 +56,8 @@ class sdist_ext_first(sdist):
         return sdist.run(self)
 
 
-_wiringpi = Extension(
-    '_wiringpi',
+_odroid_wiringpi = Extension(
+    '_odroid_wiringpi',
     include_dirs=['WiringPi/wiringPi','WiringPi/devLib'],
     sources=sources,
     swig_opts=['-threads'],
@@ -65,10 +65,10 @@ _wiringpi = Extension(
 )
 
 setup(
-    name = 'wiringpi',
+    name = 'odroid_wiringpi',
     version = '2.44.4.0',
-    ext_modules = [ _wiringpi ],
-    py_modules = ["wiringpi"],
+    ext_modules = [ _odroid_wiringpi ],
+    py_modules = ["odroid_wiringpi"],
     install_requires=[],
     cmdclass = {'build_py' : build_py_ext_first, 'sdist' : sdist_ext_first},
 )

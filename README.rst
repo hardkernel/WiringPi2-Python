@@ -20,7 +20,7 @@ Quick Install
 
 .. image:: https://badge.fury.io/py/wiringpi.svg
    :alt: PyPI version badge
-   :target: https://pypi.org/project/wiringpi/
+   :target: https://pypi.org/project/odroid-wiringpi/
 
 The library is packaged on PyPI and can be installed with pip:
 

@@ -4,6 +4,6 @@ dist/
 __pycache__
 *.pyc
 wiringpi_wrap.c
-wiringpi.py
+odroid_wiringpi.py
 .DS_Store
 .vscode
