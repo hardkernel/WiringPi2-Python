@@ -66,7 +66,7 @@ _odroid_wiringpi = Extension(
 
 setup(
     name = 'odroid_wiringpi',
-    version = '2.44.5.0',
+    version = '2.44.6.0',
     ext_modules = [ _odroid_wiringpi ],
     py_modules = ["odroid_wiringpi"],
     install_requires=[],
