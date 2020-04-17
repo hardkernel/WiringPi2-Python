@@ -1,10 +1,4 @@
 %pythoncode %{
-class nes(object):
-  def setupNesJoystick(self,*args):
-    return setupNesJoystick(*args)
-  def readNesJoystick(self,*args):
-    return readNesJoystick(*args)
-
 class Serial(object):
   device = '/dev/ttyAMA0'
   baud = 9600
@@ -68,9 +62,6 @@ class GPIO(object):
   PUD_DOWN = 1
   PUD_UP = 2
 
-  PWM_MODE_MS = 0
-  PWM_MODE_BAL = 1
-
   INT_EDGE_SETUP = 0
   INT_EDGE_FALLING = 1
   INT_EDGE_RISING = 2
@@ -90,8 +81,6 @@ class GPIO(object):
       wiringPiSetupSys()
     if pinmode==self.WPI_MODE_PHYS:
       wiringPiSetupPhys()
-    if pinmode==self.WPI_MODE_PIFACE:
-      wiringPiSetupPiFace()
 
   def delay(self,*args):
     delay(*args)
@@ -105,8 +94,6 @@ class GPIO(object):
   def piHiPri(self,*args):
     return piHiPri(*args)
 
-  def piBoardRev(self):
-    return piBoardRev()
   def wpiPinToGpio(self,*args):
     return wpiPinToGpio(*args)
   def getAlt(self,*args):
@@ -114,15 +101,13 @@ class GPIO(object):
   def digitalWriteByte(self,*args):
     return digitalWriteByte(*args)
 
-  def setPadDrive(self,*args):
-    return setPadDrive(*args)
-  def getPadDrive(self,*args):
-    return getPadDrive(*args)
+  def setDrive(self,*args):
+    setDrive(*args)
+  def getDrive(self,*args):
+    return getDrive(*args)
   def getPUPD(self,*args):
     return getPUPD(*args)
 
-  def pwmSetMode(self,*args):
-    pwmSetMode(*args)
   def pwmSetRange(self,*args):
     pwmSetRange(*args)
   def pwmSetClock(self,*args):
@@ -170,6 +155,13 @@ class GPIO(object):
   def softToneWrite(self,*args):
     return softToneWrite(*args)
 
+  def setupCheck(self, *args):
+    setupCheck(*args)
+  def usingGpiomemCheck(self, *args):
+    usingGpiomemCheck(*args)
+  def setUsingGpiomem(self, *args):
+    setUsingGpiomem(*args)
+
   def lcdHome(self,*args):
     return lcdHome(self,*args)
   def lcdCLear(self,*args):
@@ -186,12 +178,4 @@ class GPIO(object):
     return lcdPrintf(self,*args)
   def lcdInit(self,*args):
     return lcdInit(self,*args)
-  def piGlowSetup(self,*args):
-    return piGlowSetup(self,*args)
-  def piGlow1(self,*args):
-    return piGlow1(self,*args)
-  def piGlowLeg(self,*args):
-    return piGlowLeg(self,*args)
-  def piGlowRing(self,*args):
-    return piGlowRing(self,*args)
 %}

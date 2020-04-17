@@ -29,11 +29,6 @@ PUD_OFF = 0;
 PUD_DOWN = 1;
 PUD_UP = 2;
 
-# PWM
-
-PWM_MODE_MS = 0;
-PWM_MODE_BAL = 1;
-
 # Interrupt levels
 
 INT_EDGE_SETUP = 0;

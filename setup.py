@@ -12,8 +12,6 @@ from glob import glob
 sources = glob('WiringPi/devLib/*.c')
 sources += glob('WiringPi/wiringPi/*.c')
 
-# Exclude rht03.
-sources = list(set(sources) - set(glob('WiringPi/wiringPi/rht03.c')))
 # Exclude template file.
 sources = list(set(sources) - set(glob('WiringPi/wiringPi/odroid_template.c')))
 
@@ -28,13 +26,6 @@ else:
           "        (e.g., 'sudo apt install swig') or that wiringpi_wrap.c from the\n"
           "        source distribution (on pypi) is available.")
     sys.exit(1)
-
-try:
-    sources.remove('WiringPi/devLib/piFaceOld.c')
-except ValueError:
-    # the file is already excluded in the source distribution
-    pass
-
 
 # Fix so that build_ext runs before build_py
 # Without this, wiringpi.py is generated too late and doesn't
@@ -61,12 +52,12 @@ _odroid_wiringpi = Extension(
     include_dirs=['WiringPi/wiringPi','WiringPi/devLib'],
     sources=sources,
     swig_opts=['-threads'],
-    extra_link_args=['-lcrypt', '-lrt']
+    extra_link_args=[],
 )
 
 setup(
     name = 'odroid_wiringpi',
-    version = '2.44.6.0',
+    version = '3.0',
     ext_modules = [ _odroid_wiringpi ],
     py_modules = ["odroid_wiringpi"],
     install_requires=[],
