@@ -1,4 +1,10 @@
 %pythoncode %{
+class nes(object):
+  def setupNesJoystick(self,*args):
+    return setupNesJoystick(*args)
+  def readNesJoystick(self,*args):
+    return readNesJoystick(*args)
+
 class Serial(object):
   device = '/dev/ttyAMA0'
   baud = 9600
@@ -178,4 +184,13 @@ class GPIO(object):
     return lcdPrintf(self,*args)
   def lcdInit(self,*args):
     return lcdInit(self,*args)
+
+  def piGlowSetup(self,*args):
+    return piGlowSetup(self,*args)
+  def piGlow1(self,*args):
+    return piGlow1(self,*args)
+  def piGlowLeg(self,*args):
+    return piGlowLeg(self,*args)
+  def piGlowRing(self,*args):
+    return piGlowRing(self,*args)
 %}
