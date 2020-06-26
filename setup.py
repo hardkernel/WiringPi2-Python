@@ -12,8 +12,6 @@ from glob import glob
 sources = glob('WiringPi/devLib/*.c')
 sources += glob('WiringPi/wiringPi/*.c')
 
-# Exclude rht03.
-sources = list(set(sources) - set(glob('WiringPi/wiringPi/rht03.c')))
 # Exclude template file.
 sources = list(set(sources) - set(glob('WiringPi/wiringPi/odroid_template.c')))
 
@@ -61,7 +59,7 @@ _odroid_wiringpi = Extension(
     include_dirs=['WiringPi/wiringPi','WiringPi/devLib'],
     sources=sources,
     swig_opts=['-threads'],
-    extra_link_args=[],
+    extra_link_args=['-lcrypt', '-lrt'],
 )
 
 setup(
