@@ -9,6 +9,8 @@ extern		int  moduleLoaded	(char *);
 extern		void setupCheck		(const char *fName);
 extern		void usingGpiomemCheck	(const char *what);
 extern		void setUsingGpiomem	(const unsigned int value);
+extern		void setKernelVersion	(void);
+extern		char cmpKernelVersion	(int num, ...);
 extern		void wiringPiVersion	(int *major, char **minor);
 extern		int  wiringPiSetup	(void);
 extern		int  wiringPiSetupSys	(void);
