@@ -59,12 +59,12 @@ _odroid_wiringpi = Extension(
     include_dirs=['WiringPi/wiringPi','WiringPi/devLib'],
     sources=sources,
     swig_opts=['-threads'],
-    extra_link_args=['-lcrypt', '-lrt'],
+    extra_link_args=['-lcrypt', '-lrt', '-lgpiod'],
 )
 
 setup(
     name = 'odroid_wiringpi',
-    version = '3.7',
+    version = '3.13.2',
     ext_modules = [ _odroid_wiringpi ],
     py_modules = ["odroid_wiringpi"],
     install_requires=[],

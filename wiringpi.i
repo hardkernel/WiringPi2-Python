@@ -51,6 +51,7 @@
 #include "WiringPi/devLib/piNes.h"
 #include "WiringPi/devLib/scrollPhat.h"
 #include "WiringPi/devLib/piFace.h"
+#include <gpiod.h>
 %}
 
 %apply unsigned char { uint8_t };
