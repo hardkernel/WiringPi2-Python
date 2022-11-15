@@ -59,7 +59,7 @@ _odroid_wiringpi = Extension(
     include_dirs=['WiringPi/wiringPi','WiringPi/devLib'],
     sources=sources,
     swig_opts=['-threads'],
-    extra_link_args=['-lcrypt', '-lrt', '-lgpiod'],
+    extra_link_args=['-lcrypt', '-lrt'],
 )
 
 setup(
