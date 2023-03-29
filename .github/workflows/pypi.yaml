@@ -1,0 +1,50 @@
+name: 'PyPI upload'
+
+#on:
+#  push:
+#    paths:
+#      - 'setup.py'
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+      tags:
+        description: 'release'
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout'
+        uses: actions/Checkout@v3
+
+      - name: 'Checkout submodules'
+        run: |
+          git submodule sync
+          git submodule update --init --recursive
+
+      - name: 'Set up Python'
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: 'Install dependencies'
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install build
+          pip install setuptools wheel twine
+
+      - name: 'Build package'
+        run: |
+          python3 -m build
+          rm dist/*.whl
+
+      - name: 'Upload'
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          user: ${{ secrets.PYPI_USER }}
+          password: ${{ secrets.PYPI_API_TOKEN }}
+          # repository-url: 'https://github.com/hardkernel/WiringPi2-Python'
+          verbose: true
