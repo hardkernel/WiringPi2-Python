@@ -1,6 +1,6 @@
 name: 'PyPI upload'
 
-#on:
+on:
 #  push:
 #    paths:
 #      - 'setup.py'
